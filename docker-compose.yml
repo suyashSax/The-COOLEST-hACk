@@ -15,4 +15,15 @@ services:
     tty: true
     ports:
       - 5000:5000
+  marvelchat:
+    build:
+      context: .
+      dockerfile: ./marvelChat/Dockerfile
+    volumes:
+      - ./marvelChat:/marvelChat
+    networks:
+      - default
+    tty: true
+    ports:
+      - 5001:5001
 
